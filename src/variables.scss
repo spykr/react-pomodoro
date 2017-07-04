@@ -1,0 +1,25 @@
+$color-background: #ef5350;
+$color-background2: #d32f2f;
+$color-background-header: mix( $color-background, $color-background2 );
+
+$color-timer-progress: #fff;
+$color-timer-circle: #d32f2f;
+$color-text: #fff;
+
+$gradient-background: radial-gradient( circle farthest-side at top left,
+                                      $color-background 0%,
+                                      $color-background2 100% );
+
+$color-background-info: #424242;
+$color-background-info2: #212121;
+$gradient-background-info: radial-gradient( circle farthest-side at top left,
+                                      $color-background-info 0%,
+                                      $color-background-info2 100% );
+
+$shadow-text: 1px 1px 3px rgba( #000, .2 );
+$shadow-text-hover: 1px 1px 5px rgba( #000, .2 );
+$shadow-text-active: 1px 1px 1px rgba( #000, .4 );
+
+$timer-size: 320px;
+
+$border-radius-buttons: 4px;

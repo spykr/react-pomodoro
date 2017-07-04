@@ -1,0 +1,43 @@
+@import 'variables';
+
+.c-header {
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  user-select: none;
+
+  &__left,
+  &__right {
+    align-items: center;
+    color: $color-text;
+    display: flex;
+    text-decoration: none;
+  }
+
+  &__logo {
+    margin-right: 6px;
+  }
+
+  &__title {
+    // font-family: 'Roboto Condensed';
+    font-size: 25px;
+    font-weight: 300;
+    transition: .1s border;
+  }
+
+  &__button {
+    cursor: pointer;
+    font-size: 28px;
+    margin-left: 25px;
+    transition: .1s text-shadow, .1s transform;
+
+    &:hover {
+      transform: scale( 1.1, 1.1 );
+    }
+
+    &:active {
+      transform: scale( .95, .95 );
+    }
+  }
+}

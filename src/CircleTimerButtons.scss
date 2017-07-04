@@ -1,0 +1,20 @@
+@import 'variables';
+
+.c-timer-buttons {
+  display: flex;
+  margin-top: 15px;
+  user-select: none;
+  width: $timer-size;
+
+  &__c-button {
+    flex-basis: 33%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
