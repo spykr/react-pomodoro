@@ -2,8 +2,19 @@
 
 .c-timer,
 .c-timer-inner {
-  height: $timer-size;
-  width: $timer-size;
+  height: $timer-size-phone;
+  transition: .1s height, .1s width;
+  width: $timer-size-phone;
+
+  @include tablet {
+    height: $timer-size-tablet;
+    width: $timer-size-tablet;
+  }
+
+  @include desktop {
+    height: $timer-size-desktop;
+    width: $timer-size-desktop;
+  }
 }
 
 .o-timer-wrapper {
@@ -16,12 +27,13 @@
 .c-timer {
   cursor: pointer;
   left: 0;
+  height: $timer-size-phone;
   position: absolute;
   top: 0;
-  transition: transform .1s;
+  transition: transform .1s, .1s height, .1s width;
   user-select: none;
   -webkit-tap-highlight-color: rgba( #fff, 0 );
-  width: $timer-size;
+  width: $timer-size-phone;
   z-index: 1;
 
   &__progress {
@@ -40,6 +52,16 @@
 
   &:active {
     transform: scale( .99, .99 );
+  }
+
+  @include tablet {
+    height: $timer-size-tablet;
+    width: $timer-size-tablet;
+  }
+
+  @include desktop {
+    height: $timer-size-desktop;
+    width: $timer-size-desktop;
   }
 }
 

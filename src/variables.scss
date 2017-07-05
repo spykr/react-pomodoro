@@ -20,6 +20,20 @@ $shadow-text: 1px 1px 3px rgba( #000, .2 );
 $shadow-text-hover: 1px 1px 5px rgba( #000, .2 );
 $shadow-text-active: 1px 1px 1px rgba( #000, .4 );
 
-$timer-size: 320px;
+$timer-size-desktop: 370px;
+$timer-size-tablet: 340px;
+$timer-size-phone: 300px;
 
 $border-radius-buttons: 4px;
+
+@mixin tablet {
+  @media ( min-width: 600px ) and ( max-width: 1024px ) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media ( min-width: 1024px ) {
+    @content;
+  }
+}

@@ -3,8 +3,9 @@
 .c-timer-buttons {
   display: flex;
   margin-top: 15px;
+  transition: .1s width;
   user-select: none;
-  width: $timer-size;
+  width: $timer-size-phone;
 
   &__c-button {
     flex-basis: 33%;
@@ -16,5 +17,13 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  @include tablet {
+    width: $timer-size-tablet;
+  }
+
+  @include desktop {
+    width: $timer-size-desktop;
   }
 }
