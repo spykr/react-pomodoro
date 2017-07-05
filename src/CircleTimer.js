@@ -15,20 +15,22 @@ const timerMax = [
 //   1,
 //   1
 // ];
+const startStatus = 'CLICK TO START WORKING';
+const stopStatus = 'CLICK TO STOP ALARM';
 const playStatus = [
-  "WORKING",
-  "SHORT BREAK",
-  "LONG BREAK"
+  "CURRENTLY WORKING",
+  "ON SHORT BREAK",
+  "ON LONG BREAK"
 ];
 const overStatus = [
-  "DONE WORKING",
+  "TIME FOR A BREAK",
   "SHORT BREAK OVER",
   "LONG BREAK OVER"
 ];
 const nextStatus = [
   "KEEP WORKING",
-  "START 5m BREAK",
-  "START 10m BREAK"
+  "TAKE 5m BREAK",
+  "TAKE 15m BREAK"
 ];
 
 class CircleTimer extends Component {
@@ -54,7 +56,7 @@ class CircleTimer extends Component {
       paused: true,
       shortBreak: 1,
       soundsInit: false,
-      status: 'CLICK TO START',
+      status: startStatus,
       timer: null,
       timerState: 1,
       timerMax: timerMax[ 0 ],
@@ -135,9 +137,9 @@ class CircleTimer extends Component {
     let progress = Math.max( 0, ( time / this.state.timerMax ) * 100 );
     if( time === 0 )
     {
-      let beep = 4;
+      let beep = 3;
       let beeps = 0;
-      let every = 0.9;
+      let every = 1.1;
       clearInterval( this.state.timer );
 
       let newState = this.getNextState();
@@ -185,7 +187,7 @@ class CircleTimer extends Component {
     this.setState({
       buttonText: null,
       progress: 100,
-      status: "CLICK TO START",
+      status: startStatus,
       time: timerMax[ this.state.timerState - 1 ]
     });
   }
@@ -255,7 +257,7 @@ class CircleTimer extends Component {
       buttonText: null,
       paused: true,
       progress: 100,
-      status: "CLICK TO START",
+      status: startStatus,
       timerState: i,
       timerMax: t,
       time: t,
@@ -284,7 +286,7 @@ class CircleTimer extends Component {
         <CircleTimerInner
           paused={this.state.paused}
           time={this.state.time}
-          status={this.state.alarmTimer !== null ? "CLICK TO STOP ALARM" : this.state.status}
+          status={this.state.alarmTimer !== null ? stopStatus : this.state.status}
           buttonClick={this.state.buttonClick}
           buttonText={this.state.buttonText}
         />
