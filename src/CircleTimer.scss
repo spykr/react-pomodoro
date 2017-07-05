@@ -96,9 +96,18 @@
   }
 
   &__time {
-    font-size: 76px;
+    font-size: $font-size-time-phone;
     font-weight: 700;
     margin: 5px 0;
+    transition: font-size .1s;
+
+    @include tablet {
+      font-size: $font-size-time-tablet;
+    }
+
+    @include desktop {
+      font-size: $font-size-time-desktop;
+    }
   }
 
   &__status {
