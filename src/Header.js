@@ -1,11 +1,11 @@
 import React from 'react';
 import './Header.scss';
-import logo from './logo.svg';
+import LogoIcon from './LogoIcon.js';
 
 const Header = () => (
   <div className="c-header">
     <a href="" className="c-header__left">
-      <img className="c-header__logo" src={logo} alt="logo" />
+      <LogoIcon />
       <div className="c-header__title">Pomodoro</div>
     </a>
     <div className="c-header__right">

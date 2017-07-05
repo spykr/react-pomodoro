@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './CircleTimer.scss';
-import play from './play.svg';
-import pause from './pause.svg';
+import PlayIcon from './PlayIcon.js';
+import PauseIcon from './PauseIcon.js';
 
 class CircleTimerInner extends Component {
   formatTime( t ){
@@ -28,7 +28,7 @@ class CircleTimerInner extends Component {
           {this.props.status}
         </p>
         <div className="u-flex-rows">
-          <img className="c-timer-inner__icon" src={this.props.paused ? pause : play} alt="playing" />
+          {this.props.paused ? <PauseIcon /> : <PlayIcon />}
           {this.formatTime( this.props.time )}
         </div>
         { this.props.buttonText !== null &&
