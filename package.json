@@ -1,6 +1,7 @@
 {
   "name": "react-pomodoro",
   "version": "0.1.0",
+  "homepage": "https://www.darcyglennen.com/pomodoro",
   "private": true,
   "dependencies": {
     "normalize.css": "^7.0.0",
