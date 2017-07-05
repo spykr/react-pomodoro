@@ -15,8 +15,9 @@ const timerMax = [
 //   1,
 //   1
 // ];
-const startStatus = 'CLICK TO START WORKING';
+const startStatus = 'CLICK TO START TIMER';
 const stopStatus = 'CLICK TO STOP ALARM';
+const pauseStatus = 'TIMER PAUSED';
 const playStatus = [
   "CURRENTLY WORKING",
   "ON SHORT BREAK",
@@ -84,7 +85,7 @@ class CircleTimer extends Component {
     }
 
     let timer = null;
-    let status = "PAUSED";
+    let status = pauseStatus;
     let buttonText = null;
     if( paused )
     {
