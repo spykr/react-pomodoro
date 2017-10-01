@@ -37,12 +37,14 @@
   z-index: 1;
 
   &__progress {
+    fill: none;
     stroke: $color-timer-progress;
     stroke-linecap: round;
     transition: stroke-dashoffset 1s ease 0s;
   }
 
   &__circle {
+    fill: none;
     stroke: $color-timer-circle;
   }
 
